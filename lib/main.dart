@@ -101,8 +101,10 @@ class _MyHomePageState extends State<MyHomePage> {
           //   margin: EdgeInsets.only(left: 200.0, top: 300.0)),
           children: <Widget>[
             SizedBox(height: 50),
-            Text('Please choose a Background/Theme',
-                style: Theme.of(context).textTheme.headline6),
+            Text(
+              'Please choose a Background/Theme',
+              style: Theme.of(context).textTheme.headline6,
+            ),
             SizedBox(height: 70),
             TextField(
               //MK: TextField for input text for captions
