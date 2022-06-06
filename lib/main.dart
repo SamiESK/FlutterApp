@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flutter Memes Editor Demo'),
     );
   }
 }
@@ -75,7 +75,11 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
+
+      //MK changed from Center to Container
+      body: Container(
+        //  alignment: Alignment.topCenter,
+        margin: new EdgeInsets.symmetric(horizontal: 30.0),
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Column(
@@ -93,22 +97,48 @@ class _MyHomePageState extends State<MyHomePage> {
           // center the children vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          //   margin: EdgeInsets.only(left: 200.0, top: 300.0)),
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            SizedBox(height: 50),
+            Text('Please choose a Background/Theme',
+                style: Theme.of(context).textTheme.headline6),
+            SizedBox(height: 70),
+            TextField(
+              //MK: TextField for input text for captions
+              decoration: InputDecoration(
+                focusedBorder: InputBorder.none,
+                border: InputBorder.none,
+                //border: OutlineInputBorder(),
+                hintText: 'Enter a Caption term',
+              ),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+            SizedBox(height: 70),
+            Text('Please choose a Media file',
+                style: Theme.of(context).textTheme.headline5),
+            SizedBox(height: 70),
+            TextField(
+              //MK: TextField for input text for `twitter captions optional
+              decoration: InputDecoration(
+                focusedBorder: InputBorder.none,
+                border: InputBorder.none,
+                //border: OutlineInputBorder(),
+                hintText: 'Enter a Twitter Caption term (Optional)',
+              ),
             ),
+
+            // Text(
+            //   '$_counter',
+            //   style: Theme.of(context).textTheme.headline4,
+            // ),
           ],
         ),
       ),
+      //MK:Below button is for the Done/Download - onPressed to beh changed later
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.download),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
