@@ -80,6 +80,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   galleryImage();
                 }),
 
+            SizedBox(
+              height: 20,
+            ),
+            image != null ? Image.file(image!) : Text("No image selected"),
+
             SizedBox(height: 50),
 
             // Background button
