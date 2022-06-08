@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Memes Editor Demo'),
+      home: const MyHomePage(title: 'Flutter Memes Editor Demotest'),
     );
   }
 }
