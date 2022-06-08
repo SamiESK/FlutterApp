@@ -4,6 +4,11 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<!-- Added info key for getting access for using Gallery: SE  -->
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string> Photo library access warning</string>
+	<key>NSCameraUsageDescription</key>
+	<string> Photo library access warning</string>
 	<key>CFBundleDisplayName</key>
 	<string>Test</string>
 	<key>CFBundleExecutable</key>
