@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'dart:math';
+//import 'CoolButton.dart';
+import 'package:test/coolbutton.dart';
+import 'coolbutton.dart';
 
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
@@ -93,6 +96,11 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(height: 70),
             TextField(
               //MK: TextField for input text for captions
+              //MK: the below is for wrapping the text when it finishes the a line
+              keyboardType: TextInputType.multiline,
+              minLines: 1, //Normal textInputField will be displayed
+              maxLines: null, // when user presses enter it will adapt to it
+              //MK: The below is for not showing borders, and hintText
               decoration: InputDecoration(
                 focusedBorder: InputBorder.none,
                 border: InputBorder.none,
@@ -108,7 +116,12 @@ class _MyHomePageState extends State<MyHomePage> {
             // Twitter caption field
             SizedBox(height: 70),
             TextField(
-              //MK: TextField for input text for `twitter captions optional
+              //MK: TextField for input text for Twitter captions
+              //MK: the below is for wrapping the text when it finishes the a line
+              keyboardType: TextInputType.multiline,
+              minLines: 1, //Normal textInputField will be displayed
+              maxLines: null, // when user presses enter it will adapt to it
+              //MK: The below is for not showing borders, and hintText
               decoration: InputDecoration(
                 focusedBorder: InputBorder.none,
                 border: InputBorder.none,
@@ -116,10 +129,22 @@ class _MyHomePageState extends State<MyHomePage> {
                 hintText: 'Enter a Twitter Caption term (Optional)',
               ),
             ),
+            //MK:Below button is for the Done/Download - Functionality to be added later
+            ButtonAnimation(
+                Color.fromRGBO(57, 92, 249, 1), Color.fromRGBO(44, 78, 233, 1)),
           ],
         ),
       ),
-      //MK:Below button is for the Done/Download - onPressed to beh changed later
+
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: trialfunc,
+      //   tooltip: 'Download',
+      //   child: const Icon(Icons.download),
+      // ),
     );
+  }
+
+  void trialfunc() {
+    print('Hellow');
   }
 }
